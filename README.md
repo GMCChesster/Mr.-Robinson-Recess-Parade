@@ -1,6 +1,4 @@
-# 🍎 Mr. Robinson: The GOAT Teacher Parade
-**Lead Developer: [Your Name]**  
-*Commissioned by: Mr. Robinson*
+# 🍎 Mr. Robinson: The GOAT Teacher Parade 
 
 This high-performance web experience was custom-built for Mr. Robinson to showcase his status as the GOAT (Greatest of All Time) and to "officially" announce his new English class policies.
 
