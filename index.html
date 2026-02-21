@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Robinson: GOAT Teacher Parade</title>
+    <style>
+        /* 1. LAYOUT SETUP */
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            overflow: hidden; background: #87CEEB; font-family: 'Arial Black', sans-serif;
+        }
+
+        /* The Road */
+        .road {
+            position: absolute; bottom: 0; width: 100%; height: 160px;
+            background: #444; border-top: 8px solid #666; z-index: 1;
+        }
+
+        /* 2. ESPN BROADCAST OVERLAY */
+        .broadcast-frame {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            border: 20px solid #cc0000; box-sizing: border-box;
+            pointer-events: none; z-index: 1000;
+        }
+        .logo {
+            position: absolute; top: 30px; left: 30px;
+            background: #cc0000; color: white; padding: 10px 20px; font-size: 24px;
+        }
+
+/* 3. PARADE ANIMATION (The "No-Crash" Engine) */
+.float {
+    position: absolute;
+    bottom: 100px;
+    left: -1000px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* We use 40 seconds to give them plenty of room to finish */
+    animation: drive-past 40s linear infinite; 
+    z-index: 10;
+}
+
+@keyframes drive-past {
+    0% { left: -1000px; }
+    /* Driving to 300% ensures they are totally gone before lap 2 */
+    100% { left: 300%; } 
+}
+
+/* THE PERFECT SPACING (Delays must be smaller than the 40s total) */
+.f1 { animation-delay: 0s; }   /* Recess Asker #532 */
+.f2 { animation-delay: 8s; }   /* Punishment Board */
+.f3 { animation-delay: 16s; }  /* Grammar Police */
+.f4 { animation-delay: 24s; }  /* Mr. Robinson's Fuel */
+.f5 { animation-delay: 32s; }  /* Homework Squad */
+
+
+        /* 4. FLOAT STYLES */
+        .jail { width: 220px; height: 180px; background: #555; border: 6px solid #222; position: relative; }
+        .bars { 
+            position: absolute; width: 100%; height: 100%; 
+            background: repeating-linear-gradient(90deg, transparent, transparent 30px, #111 30px, #111 40px); 
+        }
+        
+        .chalkboard { 
+            width: 320px; height: 180px; background: #1a3c34; border: 12px solid #5d4037; 
+            color: white; font-family: cursive; font-size: 14px; overflow: hidden; padding: 10px;
+        }
+
+        .label { 
+            background: white; border: 3px solid #cc0000; padding: 5px 15px; 
+            margin-top: 15px; font-size: 14px; font-weight: bold; width: 220px; text-align: center;
+        }
+
+        .icon { font-size: 90px; }
+
+        /* 5. THE TICKER */
+        .ticker-wrap {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: #111; height: 65px; display: flex; z-index: 1100;
+            border-top: 4px solid #cc0000;
+        }
+        .ticker-title {
+            background: #cc0000; color: white; padding: 0 25px;
+            display: flex; align-items: center; font-weight: bold; z-index: 1200;
+        }
+        .ticker-track { flex-grow: 1; overflow: hidden; display: flex; align-items: center; }
+        .ticker-text {
+            white-space: nowrap; animation: scroll-text 20s linear infinite;
+            color: white; font-size: 22px;
+        }
+        @keyframes scroll-text {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="broadcast-frame"><div class="logo">RN: ROBINSON NETWORK</div></div>
+    <div class="road"></div>
+
+    <!-- FLOAT 1: JAIL (Your Edit Kept) -->
+    <div class="float f1">
+        <div class="jail"><div class="bars"></div><div style="font-size:60px; text-align:center; padding-top:40px;">😫</div></div>
+        <div class="label">RECESS ASKER #532</div>
+    </div>
+
+    <!-- FLOAT 2: CHALKBOARD -->
+    <div class="float f2">
+        <div class="chalkboard">
+            I will not ask for recess.<br>I will not ask for recess.<br>I will not ask for recess.<br>
+            I will not ask for recess.<br>I will not ask for recess.<br>I will not ask for recess.<br>
+        </div>
+        <div class="label">PUNISHMENT BOARD</div>
+    </div>
+
+    <!-- FLOAT 3: POLICE -->
+    <div class="float f3">
+        <div class="icon">🚔🚨</div>
+        <div class="label">GRAMMAR POLICE</div>
+    </div>
+
+    <!-- FLOAT 4: COFFEE (Your Edit Kept) -->
+    <div class="float f4">
+        <div class="icon">☕♨️</div>
+        <div class="label">MR. ROBINSON'S FUEL</div>
+    </div>
+
+    <!-- FLOAT 5: BULLDOZER -->
+    <div class="float f5">
+        <div class="icon">🚜📝</div>
+        <div class="label">HOMEWORK SQUAD</div>
+    </div>
+
+    <!-- ESPN TICKER -->
+    <div class="ticker-wrap">
+        <div class="ticker-title">BREAKING NEWS</div>
+        <div class="ticker-track">
+            <div class="ticker-text">
+                MR. ROBINSON DECLARES ENGLISH CLASS "INFINITE"... RECESS CANCELLED UNTIL 2027... NEW RULE: STUDENTS MUST SPEAK ONLY IN SHAKESPEAREAN ENGLISH... RECESS DENIED FOR ALL...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.body.addEventListener('click', function() {
+            alert("MR. ROBINSON SAYS: RECESS DENIED! Open your English books!");
+        });
+    </script>
+
+</body>
+</html>
