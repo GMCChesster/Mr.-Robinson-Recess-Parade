@@ -22,4 +22,3 @@ I engineered this project from the ground up using **Vanilla HTML5 and CSS3** to
 *   **Responsive Scaling:** The layout is designed to work on both classroom smartboards and mobile devices.
 
 ---
-*Created by [Your Name] for the Robinson Network (RN).*
